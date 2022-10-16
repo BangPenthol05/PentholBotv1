@@ -108,7 +108,7 @@ global.fakefb = {
     } }
 		// Fake ðŸ¤¥
 		global.ftroli = { key: { remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { itemCount: 9999999999999999999999999999999999999999999999999999999, status: 1, surface: 1, message: wm, orderTitle: wm, sellerJid: '0@s.whatsapp.net' } } }
-		global.fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg'), thumbnail: fs.readFileSync('./thumbnail.jpg'),sendEphemeral: true}}}
+		global.fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('thumbnail.jpg'), thumbnail: fs.readFileSync('thumbnail.jpg'),sendEphemeral: true}}}
         global.fvn = {
             key: { 
                  fromMe: false,
@@ -134,7 +134,7 @@ global.fakefb = {
                "extendedTextMessage": {
                         "text":wm,
                         "title": wm,
-                        'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
+                        'jpegThumbnail': fs.readFileSync('thumbnail.jpg')
                                }
                              } 
                             }
@@ -144,7 +144,7 @@ global.fakefb = {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat  ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "caption":"by : ImYanXiao","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+            message: { "liveLocationMessage": { "caption":"by : ImYanXiao","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('thumbnail.jpg')}}
            }
                
                   global.fliveLoc2 = {
@@ -152,7 +152,7 @@ global.fakefb = {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "title": "ImYanXiao","h": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+            message: { "liveLocationMessage": { "title": "ImYanXiao","h": wm, 'jpegThumbnail': fs.readFileSync('thumbnail.jpg')}}
            }
                
                    global.ftoko = {
@@ -165,7 +165,7 @@ global.fakefb = {
                        "product": {
                            "productImage":{
                                "mimetype": "image/jpeg",
-                               "jpegThumbnail": fs.readFileSync('./thumbnail.jpg') //Gambarnye
+                               "jpegThumbnail": fs.readFileSync('thumbnail.jpg') //Gambarnye
                            },
                            "title": Penthol, //Kasih namalu 
                            "description": "Elaina-MultiDevice", 
@@ -186,7 +186,7 @@ global.fakefb = {
               message: {
                            "documentMessage": {
                            "title": wm, 
-                           "jpegThumbnail": fs.readFileSync('./thumbnail.jpg')
+                           "jpegThumbnail": fs.readFileSync('thumbnail.jpg')
                                  }
                                }
                              }
@@ -203,7 +203,7 @@ global.fakefb = {
                    "inviteCode": "null",
                    "groupName": "Kawan Elaina", 
                    "caption": wm, 
-                   'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
+                   'jpegThumbnail': fs.readFileSync('thumbnail.jpg')
                }
            }
        }
@@ -218,7 +218,7 @@ global.fakefb = {
 					fileLength: fsizedoc,
 					height: 306,
 					width: 366,
-					jpegThumbnail: fs.readFileSync('./thumbnail.jpg')
+					jpegThumbnail: fs.readFileSync('thumbnail.jpg')
 				}
 			}
 		}
@@ -233,7 +233,7 @@ global.fakefb = {
 						fileLength: fsizedoc,
 						height: 306,
 						width: 366,
-						jpegThumbnail: fs.readFileSync('./thumbnail.jpg'),
+						jpegThumbnail: fs.readFileSync('thumbnail.jpg'),
 						viewOnce: true
 					}
 				}
@@ -252,7 +252,7 @@ global.fakefb = {
                         'seconds': '999999999', 
                         'gifPlayback': 'true', 
                         'caption': wm,
-                        'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
+                        'jpegThumbnail': fs.readFileSync('thumbnail.jpg')
                                }
                               }
                              }
