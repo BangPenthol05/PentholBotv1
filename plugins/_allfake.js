@@ -1,11 +1,8 @@
-// Made By Aguz Familia/@FokusDotId (Fokus ID)
-// Github: https://github.com/fokusdotid
-// Recode By BangPEnthol
+//By Penthol
 
 import fs from 'fs'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
-import knights from 'knights-canvas'
 
 let handler = m => m
 handler.all = async function (m) {
@@ -17,10 +14,8 @@ handler.all = async function (m) {
 	} finally {
 		
         //global.bg = await (await fetch(img)).buffer()
-		global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf", "application/vnd.android.package-archive", "application/zip"])
-		global.pic = hwaifu.getRandom()
-		global.fla = flaaa.getRandom()
-
+		global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
+		
 		// Module 
 		global.fetch = import('node-fetch')
 		global.bochil = import('@bochilteam/scraper')
@@ -29,8 +24,8 @@ handler.all = async function (m) {
         
 		// Ini untuk command crator/owner
 		global.kontak2 = [
-         [owner[0], await conn.getName(owner[0] + '@s.whatsapp.net'), ' ', 'riantitamaya@gmail.com', true],
-         [owner[1], await conn.getName(owner[1] + '@s.whatsapp.net'), ' ', 'riantitamaya@gmail.com', true], // Kalo mau di tambah tinggal copy 1baris ini di tempel di bawahnya trs di edit dikit!
+         [owner[0], await conn.getName(owner[0] + '@s.whatsapp.net'), 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'riantitamaya@gmail.com', true],
+         [owner[1], await conn.getName(owner[1] + '@s.whatsapp.net'), 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'bangpenthol05@gmail.com', true], // Kalo mau di tambah tinggal copy 1baris ini di tempel di bawahnya trs di edit dikit!
         ]
         
 		// ucapan ini mah
@@ -38,10 +33,9 @@ handler.all = async function (m) {
 		
 		// pesan sementara
 		global.ephemeral = '86400' // 86400 = 24jam, kalo ingin di hilangkan ganti '86400' jadi 'null' atau ''
-                let ente = await conn.resize(hwaifu.getRandom(), 300, 150)
-		// Acumalaka
-		global.terkadang = ente
-     		// externalAdReply atau text with thumbnail. gatau bahasa Inggris? coba translate!
+		let urls = pickRandom(['https://tinyurl.com/248tem3e', 'https://tinyurl.com/2ygkf7cn', 'https://tinyurl.com/29rt6ynv', 'https://tinyurl.com/25ampr4y', 'https://tinyurl.com/2yq9srmd', 'https://tinyurl.com/2bahkesq', 'https://tinyurl.com/2xnzw74a', 'https://tinyurl.com/2b9hocps', 'https://tinyurl.com/265ekuvk', 
+'https://tinyurl.com/2c82ajhq', 'https://tinyurl.com/265y8p3e', 'https://tinyurl.com/286yslxu'])
+		// externalAdReply atau text with thumbnail. gatau bahasa Inggris? coba translate!
 		global.adReply = {
 			contextInfo: {
 				forwardingScore: 9999,
@@ -53,37 +47,11 @@ handler.all = async function (m) {
 					mediaUrl: sgc,
 					description: 'PentholBot',
 					previewType: "PHOTO",
-					thumbnail: await (await fetch(pic)).buffer(),
+					thumbnail: await (await fetch(urls)).buffer(),
 					sourceUrl: "https://github.com/BangPenthol05",					
 				}
 			}
 		}
-		global.fpayment = {
-				"key": {
-					"remoteJid": "0@s.whatsapp.net",
-					"fromMe": false,
-					"id": "BAE595C600522C9C",
-					"participant": "0@s.whatsapp.net"
-				},
-				"message": {
-					"requestPaymentMessage": {
-						"currencyCodeIso4217": wm,
-						"amount1000": fsizedoc,
-						"requestFrom": "0@s.whatsapp.net",
-						"noteMessage": {
-							"extendedTextMessage": {
-								"text": "Hai Kak " + name
-							}
-						},
-						"expiryTimestamp": fsizedoc,
-						"amount": {
-							"value": fsizedoc,
-							"offset": fsizedoc,
-							"currencyCode": wm
-						}
-					}
-				}
-			}
 		global.fakeig = {
          contextInfo: { externalAdReply: { showAdAttribution: true,
             mediaUrl: "https://www.instagram.com/pnthll_/",
@@ -92,7 +60,7 @@ handler.all = async function (m) {
             title: 'PentholBot',
             body: wm,
             thumbnailUrl: pp,
-            sourceUrl: sig
+            sourceUrl: sgc
     }
     } }
 global.fakefb = {
@@ -106,14 +74,14 @@ global.fakefb = {
             sourceUrl: sgc
     }
     } }
-		// Fake ðŸ¤¥
+		// Fake 🤥
 		global.ftroli = { key: { remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { itemCount: 9999999999999999999999999999999999999999999999999999999, status: 1, surface: 1, message: wm, orderTitle: wm, sellerJid: '0@s.whatsapp.net' } } }
-		global.fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, sendEphemeral: true}}}
+		global.fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg'), thumbnail: fs.readFileSync('./thumbnail.jpg'),sendEphemeral: true}}}
         global.fvn = {
             key: { 
                  fromMe: false,
                  participant: `0@s.whatsapp.net`, ...(m.chat ? 
-            { remoteJid: "6285736178354-1625305606@g.us" } : {}) 
+            { remoteJid: "17608914335-1625305606@g.us" } : {}) 
                        },
             message: { 
                "audioMessage": {
@@ -128,13 +96,13 @@ global.fakefb = {
             key: { 
                  fromMe: false,
                  participant: `0@s.whatsapp.net`, ...(m.chat ? 
-            { remoteJid: "6285736178354-1625305606@g.us" } : {}) 
+            { remoteJid: "17608914335-1625305606@g.us" } : {}) 
                        },
             message: { 
                "extendedTextMessage": {
                         "text":wm,
                         "title": wm,
-
+                        'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                                }
                              } 
                             }
@@ -144,7 +112,7 @@ global.fakefb = {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat  ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "caption":"by : PentholBot","h": `${wm}`}}
+            message: { "liveLocationMessage": { "caption":"by : Papah-Chan","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
                
                   global.fliveLoc2 = {
@@ -152,7 +120,7 @@ global.fakefb = {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "title": "PentholBot","h": wm}}
+            message: { "liveLocationMessage": { "title": "Papah-Chan","h": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
                
                    global.ftoko = {
@@ -165,9 +133,10 @@ global.fakefb = {
                        "product": {
                            "productImage":{
                                "mimetype": "image/jpeg",
+                               "jpegThumbnail": fs.readFileSync('./thumbnail.jpg') //Gambarnye
                            },
-                           "title": Penthol, //Kasih namalu 
-                           "description": "Elaina-MultiDevice", 
+                           "title": wm, //Kasih namalu 
+                           "description": "Simple Bot Esm", 
                            "currencyCode": "USD",
                            "priceAmount1000": "20000000",
                            "retailerId": "Ghost",
@@ -183,8 +152,9 @@ global.fakefb = {
                   participant : '0@s.whatsapp.net'
                                },
               message: {
-                           "documentMessage": {
-                           "title": wm,
+                           documentMessage: {
+                           title: wm, 
+                           jpegThumbnail: fs.readFileSync('./thumbnail.jpg')
                                  }
                                }
                              }
@@ -197,48 +167,20 @@ global.fakefb = {
            },
            "message": {
                "groupInviteMessage": {
-                   "groupJid": "6285736178354-1625305606@g.us",
+                   "groupJid": "17608914335-1625305606@g.us",
                    "inviteCode": "null",
-                   "groupName": "Kawan Elaina", 
+                   "groupName": "Kawan Papah-Chan", 
                    "caption": wm, 
+                   'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                }
            }
        }
-       global.fimg = {
-			key: {
-				participant: '0@s.whatsapp.net'
-			},
-			message: {
-				imageMessage: {
-					url: logo,
-					mimetype: 'image/jpeg',
-					fileLength: fsizedoc,
-					height: 306,
-					width: 366,
-				}
-			}
-		}
-		global.fimgv = {
-				key: {
-					participant: '0@s.whatsapp.net'
-				},
-				message: {
-					imageMessage: {
-						url: logo,
-						mimetype: 'image/jpeg',
-						fileLength: fsizedoc,
-						height: 306,
-						width: 366,
-						viewOnce: true
-					}
-				}
-			}
        
                     global.fgif = {
             key: { 
                  fromMe: false,
                  participant: `0@s.whatsapp.net`, ...(m.chat ? 
-            { remoteJid: "6285736178354-1625305606@g.us" } : {}) 
+            { remoteJid: "17608914335-1625305606@g.us" } : {}) 
                        },
             message: { 
                         "videoMessage": { 
@@ -247,39 +189,31 @@ global.fakefb = {
                         'seconds': '999999999', 
                         'gifPlayback': 'true', 
                         'caption': wm,
-
+                        'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                                }
                               }
                              }
-                            // Random Pick Fake
-                             let pft = [global.fimg, global.fimgv, global.fpayment, global.ftroli, global.fkontak, global.fvn, global.fvid, global.ftextt, global.fliveLoc, global.fliveLoc2, global.ftoko, global.fdocs, global.fgclink, global.fgif]
-			                   // Pick Random
-		                     global.fakes = pft.getRandom()
-		        
 	}
 }
 
 export default handler 
 
 function ucapan() {
-	const time = moment.tz('Asia/Jakarta').format('HH')
-	let res = "Selamat malam 🌌"
-	if(time >= 1) {
-		res = "Selamat Dini hari 🌌"
-	}
-	if(time >= 4) {
-		res = "Selamat pagi ⛅"
-	}
-	if(time > 10) {
-		res = "Selamat siang 🌅"
-	}
-	if(time >= 15) {
-		res = "Selamat sore 🌇"
-	}
-	if(time >= 18) {
-		res = "Selamat malam 🌃"
-	}
-	return res
+    const time = moment.tz('Asia/Jakarta').format('HH')
+    let res = "Selamat malam 🌙"
+    if (time >= 4) {
+        res = "Selamat pagi 🌄"
+    }
+    if (time > 10) {
+        res = "Selamat siang ☀️"
+    }
+    if (time >= 15) {
+        res = "Selamat sore 🌅"
+    }
+    if (time >= 18) {
+        res = "Selamat malam 🌙"
+    }
+    return res
 }
 
 function pickRandom(list) {
